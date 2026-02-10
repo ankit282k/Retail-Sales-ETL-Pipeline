@@ -35,3 +35,21 @@ CREATE TABLE IF NOT EXISTS fact_sales (
     revenue NUMERIC(12,2),
     PRIMARY KEY (order_id, product_id)
 );
+
+CREATE TABLE IF NOT EXISTS stg_customers (
+    customer_id BIGINT,
+    country TEXT
+);
+
+CREATE TABLE IF NOT EXISTS stg_products (
+    product_id TEXT,
+    product_name TEXT,
+    price NUMERIC(10,2)
+);
+
+CREATE TABLE IF NOT EXISTS stg_stores (
+    store_id TEXT,
+    store_name TEXT,
+    region TEXT,
+    country TEXT
+);
